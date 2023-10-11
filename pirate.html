@@ -53,7 +53,7 @@
   margin: 10px;  padding: 20px;  font-size: 30px;
 }
 
-/* Its a Responsive layout */
+
  
 </style></head>
 
@@ -72,7 +72,7 @@
         </div>
     
     <br>
-    <hr>
+    
 	<div class="container">
         <div class="row">
             <div class="search_location col-sm-2"><img src="Treasurelocation.jpg" id="0" alt="searchlocation" style="width:100px;height:100px;" onclick="check(0)"></div>
@@ -129,22 +129,22 @@
             return
         }
         const img_id = ids[p]
-        tre_loc_img = document.getElementById(img_id)
+        tresureimg = document.getElementById(img_id)
         if(p==treasureLocation)
         {
-        tre_loc_img.src = "treasure.jpg"
+            tresureimg.src = "treasure.jpg"
         gameOver=true
-        penalty = penalty-3
+        penalty = penalty - 3;
         }
         else if (p== trapLocation)
         {
-        tre_loc_img.src = "TreasureTrap.jpg"
+            tresureimg.src = "TreasureTrap.jpg"
         gameOver=true
         penalty=penalty+4
         }
         else
         {
-            tre_loc_img.src="hat.jpg"
+            tresureimg.src="hat.jpg"
         }
         checkCount=checkCount+1
         penalty=penalty+1
@@ -186,12 +186,6 @@
         help_text = document.getElementById("help")
         help_text.innerHTML=`Help report ${report}`
     }
-
-    
-            
-    </script>
-
-
-
+ </script>
 </body>
 </html>	
